@@ -15,7 +15,7 @@ router.post('/signup', async (req,res)=>{
         await hosp.save()
         
         //confirm email
-        account.confMail(hosp.email,hosp.name, hosp._id)
+        //account.confMail(hosp.email,hosp.name, hosp._id)
         const token = await hosp.generateToken()
         // res.status(201).send({hosp, token})
         res.render('activate',{
